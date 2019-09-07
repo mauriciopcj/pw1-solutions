@@ -20,7 +20,7 @@ describe('Triangle Tools', function () {
     expect(triangleChecker(5, 4, 2))->toBe('scalene');
   });
 
-  xit('checking if it is invalid', function () {
+  it('checking if it is invalid', function () {
     expect(triangleChecker(0, 0, 0))->toBe('none');
     expect(triangleChecker(3, 4, -5))->toBe('none');
     expect(triangleChecker(1, 1, 3))->toBe('none');
