@@ -20,5 +20,3 @@ function fibonacci($number)
   }
   return $result;
 }
-
-var_dump(fibonacci(1));
