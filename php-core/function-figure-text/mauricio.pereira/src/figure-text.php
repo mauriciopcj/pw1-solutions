@@ -9,11 +9,15 @@ function triangleText($size)
 {
   $result="";
   for ($i = 1; $i <= $size; $i++){
-    for ($j = 0; $j < $i; $j++){
-      $result .= "#";
+    for ($j = 1; $j <= $size; $j++){
+      if($i >= $j){
+        $result .= "#";
+      } else {
+        $result .= " ";
+      }
     }
     if($i < $size){
-      $result.="\n";
+      $result .= "\n";
     }
   }
   return $result;
@@ -27,8 +31,12 @@ function halfDiamondText($size)
   $quant = $cont;
   while($cont <= $interacoes){
     if($cont <= $size ? $quant = $cont : $quant--);
-    for ($i = 0; $i < $quant; $i++){
-      $result .= "#";
+    for ($i = 1; $i <= $size; $i++){
+      if($i <= $quant){
+        $result .= "#";
+      } else {
+        $result .= " ";
+      }
     }
     if($cont < $interacoes){
       $result.="\n";
@@ -67,7 +75,7 @@ function diamondText($size)
 
 function boardText($size)
 {
-  $result;
+  $result="";
   for($i = 1; $i <= $size; $i++){
     for($j = 1; $j <= $size; $j++){
       if(($i + $j) % 2 == 0){

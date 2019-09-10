@@ -10,14 +10,14 @@ describe('Figure Text Tool', function () {
     );
   });
 
-  xit('making triangle text with size 2', function () {
+  it('making triangle text with size 2', function () {
     expect(triangleText(2))->toBe(
       "# \n" .
         '##'
     );
   });
 
-  xit('making triangle text with size 3', function () {
+  it('making triangle text with size 3', function () {
     expect(triangleText(3))->toBe(
       "#  \n" .
         "## \n" .
@@ -25,13 +25,13 @@ describe('Figure Text Tool', function () {
     );
   });
 
-  xit('making half diamond text with size 1', function () {
+  it('making half diamond text with size 1', function () {
     expect(halfDiamondText(1))->toBe(
       '#'
     );
   });
 
-  xit('making half diamond text with size 2', function () {
+  it('making half diamond text with size 2', function () {
     expect(halfDiamondText(2))->toBe(
       "# \n" .
         "##\n" .
@@ -39,7 +39,7 @@ describe('Figure Text Tool', function () {
     );
   });
 
-  xit('making half diamond text with size 3', function () {
+  it('making half diamond text with size 3', function () {
     expect(halfDiamondText(3))->toBe(
       "#  \n" .
         "## \n" .
@@ -49,13 +49,13 @@ describe('Figure Text Tool', function () {
     );
   });
 
-  xit('making diamond text with size 1', function () {
+  it('making diamond text with size 1', function () {
     expect(diamondText(1))->toBe(
       '#'
     );
   });
 
-  xit('making diamond text with size 2', function () {
+  it('making diamond text with size 2', function () {
     expect(diamondText(2))->toBe(
       " # \n" .
         "###\n" .
@@ -63,7 +63,7 @@ describe('Figure Text Tool', function () {
     );
   });
 
-  xit('making diamond text with size 3', function () {
+  it('making diamond text with size 3', function () {
     expect(diamondText(3))->toBe(
       "  #  \n" .
         " ### \n" .
@@ -73,20 +73,20 @@ describe('Figure Text Tool', function () {
     );
   });
 
-  xit('making board text with size 1', function () {
+  it('making board text with size 1', function () {
     expect(boardText(1))->toBe(
       '#'
     );
   });
 
-  xit('making board text with size 2', function () {
+  it('making board text with size 2', function () {
     expect(boardText(2))->toBe(
       "# \n" .
         ' #'
     );
   });
 
-  xit('making board text with size 3', function () {
+  it('making board text with size 3', function () {
     expect(boardText(3))->toBe(
       "# #\n" .
         " # \n" .
@@ -94,7 +94,7 @@ describe('Figure Text Tool', function () {
     );
   });
 
-  xit('making board text with size 4', function () {
+  it('making board text with size 4', function () {
     expect(boardText(4))->toBe(
       "# # \n" .
         " # #\n" .
