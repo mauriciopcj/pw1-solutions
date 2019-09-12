@@ -2,15 +2,29 @@
 
 function sum($array)
 {
-  // TODO
+  $result = 0;
+  foreach($array as $valor){
+    $result += $valor;
+  }
+  return $result;
 }
 
 function product($array)
 {
-  // TODO
+  $result = 1;
+  foreach($array as $valor){
+    $result *= $valor;
+  }
+  return $result;
 }
 
 function sumOdds($array)
 {
-  // TODO
+  $result = 0;
+  foreach($array as $valor){
+    if($valor % 2 != 0){
+      $result += $valor;
+    }
+  }
+  return $result;
 }
