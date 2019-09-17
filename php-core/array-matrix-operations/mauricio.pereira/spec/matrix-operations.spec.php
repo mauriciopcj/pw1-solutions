@@ -8,7 +8,7 @@ describe('Matrix Operation', function () {
     expect(addingMatrix($a, $b))->toEqual([[7, 8], [5, -3]]);
   });
 
-  xit('adding a matrix (3x3) by another matrix (3x3)', function () {
+  it('adding a matrix (3x3) by another matrix (3x3)', function () {
     $a = [[3, 8, 3], [4, 6, -1], [3, 8, 3]];
     $b = [[4, 0, 5], [1, -9, 0], [3, 8, 3]];
     expect(addingMatrix($a, $b))->toEqual([[7, 8, 8], [5, -3, -1], [6, 16, 6]]);
