@@ -18,7 +18,7 @@ describe('Comics Tool', function () {
     expect(Comic::names('Marvel'))->toEqual(['Hulk', 'Spider-Man']);
   });
 
-  xit('listing weight by DC comics', function () {
+  it('listing weight by DC comics', function () {
     expect(Comic::weights())->toEqual(228.25);
     expect(Comic::weights('DC'))->toEqual(101.0);
     expect(Comic::weights('Marvel'))->toEqual(355.5);
