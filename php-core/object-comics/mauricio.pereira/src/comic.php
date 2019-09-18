@@ -3,37 +3,37 @@ require 'character.php';
 
 class Comic
 {
-  private $characters = [];
+  private static $characters = [];
 
-  public function add($character){
-    array_push($this->$characters, $character);
+  public static function add($character){
+    array_push(self::$characters, $character);
   }
 
-  public function names($comic=""){
+  public static function names($comic=""){
     $result = [];
-    foreach($characters as $char){
+    foreach(self::$characters as $char){
       if($comic != ""){
-        if(strcmp($char->__get($comic), $comic) == 0){
-          array_push($result,$char->__get($name));
+        if(strcmp($char->__get("comic"), $comic) == 0){
+          array_push($result,$char->__get("hero"));
         }
       } else {
-        array_push($result,$char->__get($name));
+        array_push($result,$char->__get("hero"));
       }
     }
     return $result;
   }
 
-  public function weights($comic){
+  public static function weights($comic=""){
     $weights = 0;
     $quant = 0;
-    foreach($characters as $char){
+    foreach(self::$characters as $char){
       if($comic != ""){
-        if(strcmp($char->__get($comic), $comic) == 0){
-          $weights += $char->__get($weight);
+        if(strcmp($char->__get("comic"), $comic) == 0){
+          $weights += $char->__get("weight");
           $quant++;
         }
       } else {
-        $weights += $char->__get($weight);
+        $weights += $char->__get("weight");
         $quant++;
       }
     }

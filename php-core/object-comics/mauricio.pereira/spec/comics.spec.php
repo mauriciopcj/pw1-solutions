@@ -6,10 +6,10 @@ $hulk = new Character('Marvel', 'Hulk', 'Robert Bruce Banner', 2.44, 635);
 $superman = new Character('DC', 'Superman', 'Clark Joseph Kent', 1.91, 107);
 $batman = new Character('DC', 'batman', 'Bruce Wayne', 1.88, 95);
 
-Comic::add($spiderMan);
-Comic::add($hulk);
-Comic::add($superman);
 Comic::add($batman);
+Comic::add($hulk);
+Comic::add($spiderMan);
+Comic::add($superman);
 
 describe('Comics Tool', function () {
   it('listing names by DC comics', function () {
