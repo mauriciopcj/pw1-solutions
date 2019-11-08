@@ -13,6 +13,7 @@ class Database {
     }
   }
 
+<<<<<<< HEAD
   public function install($script) {
     try {
       $this->connection->exec($script);
@@ -24,6 +25,8 @@ class Database {
     } 
   }
 
+=======
+>>>>>>> upstream/master
   public function create($name, $address) {
   
     $sql = "INSERT INTO host (name, address) VALUES ('${name}', '${address}');";
