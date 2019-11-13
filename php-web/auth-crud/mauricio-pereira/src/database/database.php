@@ -13,6 +13,17 @@ class Database {
     }
   }
 
+  public function install($script) {
+    try {
+      $this->connection->exec($script);
+      return $this->connection->lastInsertId();
+    } catch(PDOExecption $e) { 
+      $this->connection->rollback(); 
+      print "Error!: " . $e->getMessage(); 
+      return null;
+    } 
+  }
+
   public function create($name, $address) {
   
     $sql = "INSERT INTO host (name, address) VALUES ('${name}', '${address}');";
