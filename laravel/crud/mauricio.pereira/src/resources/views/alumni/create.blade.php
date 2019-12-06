@@ -12,12 +12,12 @@
     <div class="alert alert-danger">
       <ul>
         @foreach ($errors->all() as $error)
-        <li></li>
+        <li>{{ $error }}</li>
         @endforeach
       </ul>
     </div>
     @endif
-    <form method="post" action="">
+    <form method="post" action="{{ route('alumni.store') }}">
       <div class="form-group">
         @csrf
         <label for="name">Name:</label>

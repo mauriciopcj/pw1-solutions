@@ -5,7 +5,7 @@
 @section('content')
 @if(session()->get('success'))
 <div class="alert alert-success">
-  
+  {{ session()->get('success') }}
   <button type="button" class="close" data-dismiss="alert" aria-label="Close">
     <span aria-hidden="true">&times;</span>
   </button>
@@ -22,15 +22,15 @@
     </tr>
   </thead>
   <tbody>
-    @foreach($alumni as $al)
+    @foreach($alumni as $alumni)
     <tr>
-      <td>{{ $al->id }}</td>
-      <td>{{ $al->name }}</td>
-      <td>{{ $al->email }}</td>
-      <td>{{ $al->linkedin }}</td>
-      <td><a href="" class="btn btn-primary" role="button">Edit</a></td>
+      <td>{{$alumni->id}}</td>
+      <td>{{$alumni->name}}</td>
+      <td>{{$alumni->email}}</td>
+      <td>{{$alumni->linkedin}}</td>
+      <td><a href="{{ route('alumni.edit', $alumni->id) }}" class="btn btn-primary" role="button">Edit</a></td>
       <td>
-        <form action="" method="post">
+        <form action="{{ route('alumni.destroy', $alumni->id)}}" method="post">
           @csrf
           @method('DELETE')
           <button class="btn btn-danger" type="submit">Delete</button>
@@ -40,5 +40,5 @@
     @endforeach
   </tbody>
 </table>
-<a href="" class="btn btn-primary" role="button">Add alumnus</a>
+<a href="{{ route('alumni.create') }}" class="btn btn-primary" role="button">Add alumnus</a>
 @endsection
